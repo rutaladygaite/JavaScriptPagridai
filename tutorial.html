@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+	console.log("hello world");
+
+	var x=15;
+//jei x yra 5, ciklas prasisuka 10 kartu
+//jei ne - 7 kartus
+
+
+if (x==5) {
+	for (var i = 0; i <=9; i++) 
+		{ 
+			console.log(i);
+		}
+	}
+	else {
+		for (var i = 0; i <=6; i++)
+		{
+			console.log(i);
+		}
+	}
+
+
+// liekanos
+
+
+	if( x%3 == 0 && x %5 == 0) {
+		console.log ("dalinasi is 5 ir 3");
+	}
+
+	if (x%2 == 0 || x %3 ==0) {
+		console.log("dalinasi is 5 arba 3");
+	}
+
+ // atspauzdinti didziausia skaiciu is saraso
+
+var a = 7, b = 5, c = 0, d= -6, e= 13; 
+
+	if( a>b && a>c && a>d &&a>e) {
+		console.log (a);
+	}
+	else if ( b>c && b>d &&b>e) {
+		console.log (b);
+	}
+	else if (c>d && c>e) {
+		console.log (c);
+	}
+	else if (d>e) {
+		console.log (d);
+	}
+	else {
+		console.log (e);
+	}
+
+
+// atspauzdinti nuo didziausio iki maziausio skaiciaus pagal eiliskuma
+
+var q=0, w=4, e=1;
+
+	if (q>w && q>e)
+	{
+		if (w>e) {
+			console.log(q + " " + w + " " + e)
+		}
+		else {
+			console.log(q + " " + e + " " + w)
+		}
+	}
+	if (w>q && w>e)
+	{
+		if (q>e) {
+			console.log(w + " " + q + " " + e)
+		}
+		else {
+			console.log(w + " " + e + " " + q)
+		}
+	}
+
+	if (e>w && e>q)
+	{
+		if (q>w) {
+			console.log(e + " " + q + " " + w)
+		}
+		else {
+			console.log(e + " " + w + " " + q)
+		}
+	}
+
+//ciklas daugybos lentelei
+
+	for (i=0; i <= 10; i++) {
+		for ( var j=0; j<=10; j++){
+			console.log(i + " * " + j + " = " + i*j);
+		}
+	}
+
+//rodyti zvaigzdutes piramide nuo 1-10
+
+	var simbolis = "*";
+
+	for ( i = 0; i<=9; i++) {
+		console.log (simbolis);
+		simbolis = simbolis+"*";
+
+	}
+
+//paziureti, kurie skaiciai yra lyginiai, kurie ne ir prirasyti prie skaiciaus
+
+	for ( i = 0; i<=100; i++) {
+		if (i%2 == 0) {
+			console.log (i + " lyginis");
+		}
+		else {
+			console.log (i + " nelyginis");
+		}
+
+	}
+
+//parasyti komanda, kad atspauzdintu rezultata - ar sudauginus gaunasi teigiamas, ar neigiamas rezultatas
+
+	a= -1; b = -3; c = -5;
+
+	if (a*b*c > 0) {
+		console.log (" teigiamas rezultatas");
+	}
+	else {
+		console.log ("neigiamas rezultatas");
+	}
+
+//promt ir alert
+
+/*	var temperatura = prompt ("Iveskite temperatura Celsiumi: ");
+	temperatura = (temperatura*9/5)+32;
+	console.log ("Farenheitais temperatura: " + temperatura);
+	alert ("Temperatura Farenheitais bus:" + temperatura + "F");
+*/
+
+//masyvai
+
+var skaiciai = [1,2,3,4,5];
+console.log(skaiciai[2]);
+skaiciai[2]=5;
+console.log(skaiciai[2]);
+
+//kurti masyva su 5 zodziais
+
+var automobiliai = ["audi", "BMW", "Mercedes", "Subaru"];
+console.log(automobiliai[1]);
+
+
+//naudojantis for ciklu, atspauzdinti visas automobiliu markes
+
+for (var i=0;i<=3;i++) {
+	console.log(automobiliai[i]);
+}
+
+var misrus = ["Audi", 5, "Mercedes"];
+
+console.log(misrus);
+
+for (var i=0;i<=2;i++) {
+	console.log(misrus[i]);
+}
+
+
+//5 kartus vartotojas turi issaugoti reiskmes ir leisti issaugoti kompiuteryje;
+/* var ivedimas = [0,0,0,0,0];
+ivedimas[0] = prompt ("Iveskite pirmaja reiksme: ");
+ivedimas[1] = prompt ("Iveskite antraja reiksme: ");
+ivedimas[2] = prompt ("Iveskite treciaja reiksme: ");
+ivedimas[3] = prompt ("Iveskite ketvirtaja reiksme: ");
+ivedimas[4] = prompt ("Iveskite penktaja reiksme: ");
+
+console.log (ivedimas[0] + " ," + ivedimas[1] + " ," + ivedimas[2] + " ," + ivedimas [3] + " ," + ivedimas[4]);
+*/
+ /* var ivedimas = [0,0,0,0,0,];
+for (i = 0; i <= 4; i++) {
+	ivedimas[i] = prompt ("Iveskite reiksme: ");
+}
+console.log (ivedimas);
+*/ 
+
+//uzduotis:
+//var arr = [0,1,7,-1,-6,20,7]
+//jei skaicius yra neigiamas, padaryti ji teigiama
+//jei skaicius yra nulis, prie jo prideti sekanti skaiciu
+//jei skaicius yra >5 padauginti ji is 2
+
+var arr = [0,1,7,-1,-6,20,7];
+
+for ( var i=0; i<=6; i++) {
+
+if (arr[i]>5) {
+	arr[i]= arr[i]*2;
+}
+
+if (arr[i] < 0) {
+	arr[i] = arr[i]*-1;
+}
+if (arr[i]==0) {
+	arr[i] = arr[i] + arr[i+1];
+	}
+	console.log(arr[i]);
+}
+
+//ivesties patikrinimas
+// 5 elemnetu masyvas
+// ivedamas skaicius ir:
+//jei skaicius %2 tada parasyti, kad dalinasi is 2;
+//jei neigiamas, atspauzdinti ji, jo kvadrata ir kuba;
+//jei skaicius 7 daugiklis, ivesti i masyva
+
+/*
+var element = [0,0,0,0,0];
+element[0] = prompt ("Iveskite skaiciu: ");
+
+if (element[0]%2 == 0) {
+	console.log("Dalinasi is 2 ");
+}
+else {
+	console.log("Nesidalina is 2");
+}
+
+if (element[0] < 0) {
+	element[1] = element[0];
+	element[2] = element[0]*element[0];
+	element[3] = element[0]*element[0]*element[0];
+	console.log("Skaicius: " + element[1] + " Kvadratas: " + element[2] + " Kubas: " + element[3]);
+}
+
+if (element[0]%7 == 0 && element[0]>0) {
+	element[4] = element[0];
+	console.log( element[4] + " skaicius yra 7-iu daugiklis");
+}
+
+*/
+
+var mas = [0,0,0,0,0];
+for (var i = 0; i <= 4; i++) {
+	var ivestis = prompt ('Iveskite skaiciu:');
+	if (
+		ivestis%2 == 0 ||
+		ivestis<0 ||
+		(ivestis % 7 == 0 && ivestis >0)) {
+			mas[i] = ivestis;
+		}
+}
+
+for (var i=0;i<=4; i++) {
+	if (mas[i]%2==0){
+		console.log(mas[i] + ' skaicius dalinasi is 2');
+	}
+	else{
+		console.log(mas[i] + ' skaicius nesidalina is 2');
+	}
+	if (mas[i]<0) {
+		console.log ('skaicius: ' + mas[i] + ' jo kvadratas: ' + mas[i]*mas[i] + ' jo kubas: ' + mas[i]*mas[i]*mas[i]);
+	}
+}
+
+</script>
+</body>
+</html>
