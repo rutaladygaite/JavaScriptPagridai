@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p id="prekes" onmouseenter="preke.taikytiNuolaida()" onmouseleave="preke.rodytiKaina()"></p>
+
+<script type="text/javascript">
+
+var preke = {
+	vardas: "Echo",
+	kaina: 49.99,
+	nuotrauka: true,
+	nuolaida: 20.00,
+	taikytiNuolaida:function(){
+		document.getElementById('prekes').innerHTML = '<s>'+preke.kaina + '</s>'+' ' + (preke.kaina-preke.nuolaida).toFixed(2);
+	},
+	rodytiKaina:function(){
+	document.getElementById('prekes').innerHTML =preke.kaina ;
+	}
+
+}
+
+console.log(preke);
+
+document.getElementById("prekes").innerHTML = preke.kaina;
+document.write ('<h1>' + preke.vardas + '</h1>');
+document.write ('<p>' + (preke.kaina-preke.nuolaida).toFixed(2)+ '<p>');
+
+
+function taikytiNuolaida(){
+document.getElementById('prekes').innerHTML = '<s>'+preke.kaina + '</s>'+' ' + (preke.kaina-preke.nuolaida).toFixed(2);
+}
+
+
+function rodytiKaina(){
+document.getElementById('prekes').innerHTML =preke.kaina ;
+}
+
+
+preke.tipas = "Smart Home";
+preke.spalva = "juoda";
+document.write('<h2>' + preke.tipas + '</h2>');
+
+
+//Sukurti objekta ir naudojantis objekto laukais ir ju pasiekimu aspauzdinti: Jonas Jonaitis, Vilnius, LT-85045, sumokejo: 20.57 eurus;
+
+var vartotojas =  {
+	vardasIrPavarde: 'Jonas Jonaitis',
+	miestas: 'Vilnius',
+	kodas: 'LT-85045',
+	suma: 20.57
+}
+
+document.write (vartotojas.vardasIrPavarde + ', ' + vartotojas.miestas + ', ' + vartotojas.kodas + ', sumokejo: ' + vartotojas.suma + ' eurus');
+
+
+</script>
+<hr>
+<script type="text/javascript">
+	// sukurti objekta ir naudojantis objekto laukais ir ju pasiekimu atspauzdinti: Knygos autorius: Brendan Eich, knygos pavadinimas: JavaScript Bible, kaina: 22 eurai
+var autorius = {
+	vardasPavarde:'Brendan Eich',
+	pavadinimas: 'JavaScript Bible',
+	kaina: 22
+}
+document.write ("Knygos autorius: " + autorius.vardasPavarde + ". Knygos pavadinimas: \"" + autorius.pavadinimas + "\". Kaina: " + autorius.kaina + " eurai");
+
+</script>
+
+<hr>
+
+<script type="text/javascript">
+	//Sukurti objekta ir atspauzdinti: Autorius Tim Ferris parasytos knygos yra: Tribe of Mentors, Tool of Titan, The 4 Hour Body, The 4 Hour Worksheet
+
+	var rasytojas = {
+		vardasPavarde: "Tim Ferris",
+		knygos: ["Tribe of Mentors ", "Tool of Titan ", "The 4 Hour Body ", "The 4 Hour Worksheet "]
+	}
+
+	document.write ("Autoriaus " + rasytojas.vardasPavarde + " parasytos knygos yra: " + rasytojas.knygos);
+
+</script>
+
+<hr>
+<script type="text/javascript">
+	//Sukurti objekta, kuris atspauzdins: imoneje Apple uz produkto gamyba yra atsakingi try departamentai:Washingtono (atsakingas asmuo: John), Clevelando (atsakingas asmuo: Joe), Michigano (atsakingas asmuo: George)
+
+var departamentai = {
+	vardas: "Apple",
+	atsakingas: [ 
+		{vietove: "Washingtono: ",
+			zmogus:  "John "
+		},
+		{ vietove: "Clevelando: ",
+			zmogus: "Joe "
+		},
+		{ vietove: "Michigano: ",
+			zmogus: "George "
+		}
+	]
+
+document.write ("Imoneje " + departamentai.vardas + " uz produkto gamyba yra atsakingi trys departamentai: " + departamentai.atsakingas[0].vietove);
+
+}
+</script>
+</body>
+</html>
