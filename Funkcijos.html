@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+
+
+//aprasyti sumos funkcija
+
+var suma = function(x,y){
+
+	var s;
+	s = x+y;
+	return s;
+}
+
+// ta pati funkcija, kitaip uzrasyta:
+
+function suma (x,y){
+
+	var s;
+	s = x+y;
+	return s;
+}
+
+// Dar labiau supaprastinti galima:
+
+var suma = function(x,y){
+	return x+y;
+}
+
+console.log("Sumos rezultatas: "+suma(5,4));
+console.log("Sumos rezultatas: " + suma(6,2));
+console.log("Sumos rezultatas: " + suma(7,-5));
+
+//Funkcija, kuri sudaugina du skaicius:
+
+function daugyba (x,y){
+
+	var s;
+	s = x*y;
+	return s;
+}
+
+console.log("Daugybos rezultatas: " + daugyba(5,4));
+
+//Funkcija, kuri skaiciu pakelia kvadratu
+
+
+function kvadratas (x){
+
+	var s;
+	s = x*x;
+	return s;
+}
+
+console.log("Skaiciaus kvadratas: " + kvadratas(5));
+
+// Funkcija, kuri patikrina, ar vartotojas ivede skaiciu tarp 0 ir 10
+
+var skaicius = prompt ("Iveskite skaiciu: ");
+
+desimtis(skaicius);
+
+function desimtis (x){
+	if (x <=10 && x >=0){
+		console.log("Skaicius yra tarp 0 ir 10.");
+	}
+	else {
+		var ivestis2 = prompt ("Iveskite skaiciu: ");
+		desimtis(ivestis2);
+	}
+}
+
+//Funkcija, kuri pavercia atstuma myliomis i atstuma kilometrais
+
+var mylia = prompt ("Iveskite mylias: ");
+
+function km (x) {
+	var converter = x * 1.609344;
+	return converter;
+}
+
+console.log(mylia + " mylios kilometrais bus: "+ km(mylia));
+
+//Funkcija, kuri skaiciu pakelia pasirinktu laipsniu
+
+var pradinissk = prompt ("Iveskite skaiciu, kuri kelsite laipsniu");
+var laipsniosk = prompt ("Iveskite skaiciu, kuriuo bus pakeltas skaicius: ");
+
+function laipsnis (x,y){
+	var l = Math.pow(x,y);
+	return l;
+}
+
+console.log(pradinissk + " pakeltas " + laipsniosk + " yra lygus: "+ laipsnis(pradinissk, laipsniosk));
+
+
+
+//Funkcija, kuri is masyve esanciu skaiciu atspauzdina tik lyginius skaicius
+
+var masyvas = [8,3,12,5,4,22,11,1];
+
+for (var i=0; i<masyvas.length; i++) {
+	if (lyginisMasyve(masyvas[i]) != false){
+		console.log("Lyginis skaicius masyve yra: " + lyginisMasyve(masyvas[i]));
+	}
+}
+
+
+function lyginisMasyve(x) {
+	
+	if (x % 2 == 0){
+		return x;
+		}
+	else {
+		return false;
+		}
+	}
+
+
+// Ivedus vartotojo varda, yra atspauzdinamas pasisveikinimas su jo vardu
+
+var vardas = prompt ("Koks jusu vardas?");
+
+function labas (x) {
+	var sveikas = window.alert("Labas, " + x + "!");
+	return sveikas;
+
+}
+
+labas(vardas);
+
+
+
+// Funcija, kuri atspauzdina masyvo ilgi
+
+var masyvas = [5,9,7,2,6,11,74,58,41];
+
+function milgis (x) {
+	console.log("Masyvo ilgis yra: " + x.length);
+}
+
+milgis(masyvas);
+
+
+//Funkcija, kuri perraso skaiciu is kitos puses;
+
+var skaicius = prompt ("Iveskite skaiciu:");
+
+function kitapuse (x) {
+	var res = [];
+	for (var i = 0; i<x.length; i++) {
+		res.push(x[(x.length-1)-i]);
+	}
+	return res.join('');
+}
+
+
+console.log(skaicius + " skaiciaus atvirsktinis: " + kitapuse(skaicius));
+
+//Funkcija, kuri is ivesto sakinio randa ilgiausia zodi;
+
+var ivestis = prompt ("Iveskite sakini: ");
+
+function ilgasZodis (str){
+var strSplit = str.split(' ');
+var longestWord = strSplit.reduce(function(longest, currentWord) {
+    if(currentWord.length > longest.length){
+       return currentWord;
+    }
+    else{
+       return longest;
+    }
+  }, "");
+ return longestWord; 
+}
+console.log(ilgasZodis(ivestis));
+
+
+//Funkcija, kuri patikrina, ar ivestas skaicius yra pirminis;
+
+var pirminis = prompt ("Iveskite skaiciu: ");
+
+function isPrime(value) {
+    for(var i = 2; i < value; i++) {
+        if(value % i === 0) {
+        	console.log(value + " skaicius nera pirminis");
+            return false;
+        }
+    }
+    console.log(value + " skaicius yra pirminis");
+    return value > 1;
+}
+
+isPrime(pirminis);
+
+
+	</script>
+
+</body>
+</html>
