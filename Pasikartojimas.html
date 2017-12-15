@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+//Pasirinkti 5 salis ir ju valstybes plota (km2) bei gyventoju skaiciu
+//sukurti nauja masyva, kurio elementai butu sie objektai (plotas, gyventoju skaicius)
+//sukurti funkcija getAreaPerCapital(), kuri moketu apskaiciuoti, koks tenka vienam gyventojui (m2) kiekvienoje salyje
+//parasykite cikla, kuris perbegtu per visus masyvo elementus ir kiekvienam is ju kviestu funkcija getAreaPerCapital(, gautu rezultata), atspauzdintu info
+
+
+//Japonija 377 873 km² ; 126 045 211
+//Kanada 9 984 670 km² ; 36 626 083
+//Rusija 17 098 242 km² ; 143 375 006 
+//Indija 3 287 590 km² ; 1 342 512 706
+//Honkongas 1 102,15 km² ; 7 401 941
+
+var tankis = {
+	salis: [
+	{ pav: "Japonija",
+		zmones: 126045211,
+		plotas: 377873
+	},
+
+	{ pav: "Kanada",
+		zmones: 36626083,
+		plotas: 9984670,
+	},
+
+	{ pav: "Rusija",
+		zmones: 143375006,
+		plotas: 17098242,
+	},
+
+	{ pav: "Indija",
+		zmones: 1342512706,
+		plotas: 3287590,
+	},
+
+	{ pav: "Honkongas",
+		zmones: 7401941,
+		plotas: 1102.15,
+	}
+	]
+}
+
+function getAreaPerCapital(x,y) {
+
+	//x yra plotas, y gyventoju skaicius
+	var plotas = (x*1000000)/y;
+	return plotas;
+
+}
+
+for (var i=0; i<=tankis.salis.length; i++){
+	document.write("Salis: " + tankis.salis[i].pav +". Zmoniu skaicius: " + (tankis.salis[i].zmones/1000000).toFixed(2) + " mil. Salies plotas: "+ tankis.salis[i].plotas + " km². Plotas vienam gyventojui tenka: " + getAreaPerCapital(tankis.salis[i].plotas, tankis.salis[i].zmones).toFixed(2) + " m².");
+	document.write('<hr>');
+}
+/*
+ 	for (x in tankis){
+		document.write(tankis[i][x] + ', ');
+	}
+*/
+	</script>
+
+
+</body>
+</html>
