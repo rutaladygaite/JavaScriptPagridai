@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kartojimas</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+
+<script type="text/javascript">
+	
+
+	//patikrinti, ar ivestas zodis yra exit, jei exit, tada atspauzdinti
+	var a = prompt("Iveskite zodi: "); 
+	if (a == "exit") {
+		console.log("Ivestas zodis yra exit");
+	}
+	else if (a =="enter"){
+		console.log("Ivestas zodis yra enter");
+	}
+	else {
+		console.log("Ivestas zodis nera exit");
+	}
+
+	//patikrinti, ar ivestas zodis yra exit, arba enter, jei taip, atspauzditni ivesta zodi (loginis)
+
+	var b = prompt("Iveskite zodi: ");
+	if (b=="exit" || b=="enter"){
+		console.log("Ivestas zodis yra "+b);
+	}
+
+
+   var a = prompt ("Iveskite pirmaji skaiciu: ");
+   var b = prompt ("Iveskite antraji skaiciu: ");
+
+   if (a>b) {
+   	console.log(a + " yra daugiau uz " + b);
+   	console.log("Ju dalyba yra: " + a/b);
+   }
+   else{
+   	console.log(b + " yra daugiau uz " + a);
+   	console.log("Ju dalyba yra: " + b/a);
+   	   }
+	
+
+
+   // Sukurti "number guessing game". sugeneruojamas random skaicius nuo 1 iki 10. Vartotojas turi bandyti atspeti, jei atspeja, smeta alerta, kad atspejote, o kitu atveju , kad neatspejote
+
+  /*
+	var a =  Math.floor((Math.random() * 10) + 1);
+while(true){
+	var b = prompt ("Iveskite skaiciu:");
+	if(a == b){
+		alert("atspejai");
+		console.log("Skaicius buvo: "+ a);
+	}
+	else{
+		alert("neatspejai");
+	}
+}
+*/
+ //parasyti cikla, kad atspauzdintu cikla nuo 1 iki 10
+
+for(var i=0; i<=9;i++){
+	console.log(i);
+}
+
+//parasyti cikla, kuris atspauzdina lyginius skaicius nuo 0 iki 10
+ console.log("visi lyginiai skaiciai nuo 0 iki 10");
+for(var i=0; i<=9;i++){
+	if(i%2 == 0){
+	console.log(i);}
+}
+
+var a = prompt ("Iveskite skaiciu: ");
+console.log("Visi skaiciai iki jusu ivesto skaiciaus: ")
+for(var i=0; i<=a;i++)
+{
+	console.log(i);
+}
+
+//parasyti cikla, kuris paaso skaiciau faktoriala
+var b = prompt("Iveskite skaiciu: ");
+var factorial = 1;
+
+for(var i=1; i<=b;i++){
+	factorial *= i;
+}
+console.log(b+" faktorialas bus "+factorial);
+
+// parasyti cikla, kuris atspauzdina kas 5 skaiciu nuo 0 iki 100
+console.log("sie skaiciai dalinasi is 5 nuo 0 iki 100");
+for(var i=0; i<=100;i++){
+	if(i%5 == 0) {
+		console.log(i);
+	}
+}
+
+
+//atspauzdinti cikla, kuris atspauzdina visus masyvo elementus
+//var arr = [1,2,3,4,5,6,7,8,9,10]
+console.log("atspausdina lyginius masyvo elementus: ");
+var arr = [1,2,3,4,5,6,7,8,9,10];
+for (var i=0; i<arr.length;i++){
+	if (arr[i]%2==0){
+	console.log(arr[i]);}
+}
+
+//parasyti cikla, kuris atspauzdina daugybos lentele
+console.log("daugybos lentele: ");
+for (var i=0; i<5;i++) {
+	for (var j=0; j<5;j++){
+		console.log([i] + " * "+ [j] + " bus "+ i*j);
+	}
+}
+</script>
+</body>
+</html>
