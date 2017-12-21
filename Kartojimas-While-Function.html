@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>While</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	//parasyti while cikla, kurio metu vartotojas vis ivedineja zodi, kol neparaso zodzio stop
+	while ( a != "stop"){
+		var a = prompt("Iveskite zodi: ");
+		console.log("Ivestas zodis: " + a);
+	}
+
+	//papildyti pirmaji cikla, kad kiekviena ivedima idetu i masyva
+	//naudojantis ciklu while atspausdinti is masyvo visus jo elementus
+	var b = [];
+	while ( a != "stop"){
+		var a = prompt("Iveskite zodi: ");
+		b.push(a);
+	}
+	console.log("Ivesti zodziai: " + b);
+
+	//parasyti programa, kuri tikrina pirma ir antra vartotojo ivedimus ir pasako, ar vartotojas ivede ta pati 
+	
+		var a = prompt ("Iveskite pirmaji zodi: ");
+		var b = prompt ("Iveskite antraji zodi: ");
+
+	while(a!=b){
+		console.log(a+ " zodis nesutampa su " + b);
+		var a = prompt ("Iveskite pirmaji zodi: ");
+		var b = prompt ("Iveskite antraji zodi: ");
+		
+	}
+
+	console.log(a+ " sutampa su " + b);
+
+	
+	//parasyti programa, kur vartotojas iveda kiek kartu ivykdyti while cikla ir atspauzdinti kiekvieno ciklo iteracija (jei iveda 3, tai konsoleje turi atsispausdinti 1 2 3)
+
+	var a = prompt ("Iveskite skaiciu: ");
+	var i=1;
+	while (i<=a){
+		console.log(i);
+		i++;
+	}
+
+	var a = prompt("Iveskite skaiciu: ");
+	function lyginis (x){
+		if(x%2 == 0) {
+			return(x+" skaicius yra lyginis");
+		}
+		else {
+			return(x+" skaicius yra nelyginis");
+		}
+	}
+
+	console.log(lyginis(a));
+
+
+
+	var name=prompt("Iveskite varda: ");
+	function greetings(n){
+		alert("Labas, " + n+ " !");
+	}
+
+	greetings(name);
+
+	*/
+
+
+</script>
+
+<form>
+	Iveskite skaiciu: <input type="text" name="skaicius" id="kvadratas">
+<button type="button" onclick="kelimas()"> Skaiciuoti </button>
+
+</form>
+<div id="spausdinti">
+	
+</div>
+<script src="Kartojimas-While-Function.js">
+</script>
+</body>
+</html>
